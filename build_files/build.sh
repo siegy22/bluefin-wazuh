@@ -9,6 +9,8 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+curl -o wazuh-agent-4.14.0-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.14.0-1.x86_64.rpm && sudo WAZUH_MANAGER='139.59.139.215' rpm -ihv wazuh-agent-4.14.0-1.x86_64.rpm
+
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
